@@ -14,6 +14,7 @@
 |---|---|
 | [como-trabalhamos.md](como-trabalhamos.md) | Papel do Claude + dinâmica de trabalho (Grill Me, PT-BR, economia de contexto, governança). **Leia antes de pedir código.** |
 | [escopo-v1.md](escopo-v1.md) | **Escopo da v1**: objetivo, critério, o que está dentro/fora, as 6 fases, prazo declarado e o que segue em aberto. |
+| [perguntas-de-negocio.md](perguntas-de-negocio.md) | Perguntas para a Bruna e o Edson cuja resposta muda o app, com status e resposta datada. |
 | [contexto-herdado.md](contexto-herdado.md) | O negócio (Madiba Garden), o projeto irmão, e o que este projeto herda ou não. |
 | [modelo-de-pedido.md](modelo-de-pedido.md) | O formato com que o pedido nasce hoje no catálogo (tipos, centavos, adicionais) e as consequências disso aqui. |
 | [branches-e-deploy.md](branches-e-deploy.md) | Estratégia de branches (feature → `main` → `production`) e a regra: **produção só com permissão humana.** |
