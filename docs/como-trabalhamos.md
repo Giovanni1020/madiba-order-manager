@@ -26,7 +26,7 @@ as decisões de design. Discussão primeiro, implementação depois.
 - **Estrutura modular**, componentes limpos, **funções puras** na camada de domínio.
 - **Mostrar o diff e aguardar aprovação** antes de qualquer commit.
 - Tópicos marcados como "estudar depois" → `matriz-mental.md` (criar quando houver o primeiro).
-- Formato dos cards do Trello: ver [`trello-padrao.md`](trello-padrao.md).
+- Tarefas no GitHub Projects, padrão de issue: ver [`github-projects.md`](github-projects.md).
 
 ## Como usar como contexto em uma janela nova
 
