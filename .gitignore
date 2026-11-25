@@ -31,3 +31,8 @@ Thumbs.db
 # Claude
 .claude/worktrees/
 .claude/settings.local.json
+
+# Saída efêmera de ferramenta de IA e anotação local de sessão (inclui laudos do /revisar-doc).
+superpowers/
+.handoffs/
+.claude/*.local.md
