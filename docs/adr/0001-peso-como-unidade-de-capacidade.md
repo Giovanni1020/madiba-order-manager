@@ -31,11 +31,12 @@ Abaixar peso para fechar venda é proibido por construção: se peso pudesse ser
 planejamento de produção passaria a mentir — o sistema acharia que o buquê leva menos tempo
 porque alguém quis cobrar menos.
 
-**D3 — Peso é atributo da montagem, não do produto nem da variante.** Variantes que diferem
-apenas na aparência da flor (5 rosas importadas × 5 rosas nacionais) **compartilham o mesmo
-peso**: o trabalho é idêntico. A tabela de pesos é indexada pela **forma da montagem**, não
-por `product_id`. Indexar por produto duplicaria o mesmo peso em N variantes, e elas
-divergiriam sozinhas na primeira revisão.
+**D3 — Peso é atributo da montagem, não do produto nem da variante.** Produtos diferentes
+podem levar a mesma montagem: no catálogo, "Buquê 5 Rosas Importadas" e "Buquê 5 Rosas
+Nacionais" são **produtos separados**, e quando o trabalho de montar é o mesmo eles
+**compartilham o mesmo peso**. A tabela de pesos é indexada pela **forma da montagem**, não pelo
+produto. Indexar por produto (ou por variante) duplicaria o mesmo peso em N cadastros, e eles
+divergiriam sozinhos na primeira revisão.
 
 **D4 — Exceções entram por override manual no pedido.** Casos atípicos que a tabela não
 cobre são ajustados no pedido, não na tabela. O override é auditado

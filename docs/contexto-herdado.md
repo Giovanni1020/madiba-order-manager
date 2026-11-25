@@ -18,7 +18,7 @@ plaquinhas, polaroides, cartões. Site público: <https://madibagarden.com>
 | Repo | <https://github.com/Giovanni1020/madiba-gift-catalog> |
 | Stack | React + TypeScript, **CRA** (`react-scripts`), em **migração para Next.js App Router** (v1.2, ADR-0009) |
 | Hospedagem | Vercel, Production Branch = `production` |
-| Branches | `main` (CRA, base de hotfix) · `production` (no ar) · `next` (integração da migração, só durante a v1.2) |
+| Branches | `main` (CRA, base de hotfix) · `production` (no ar) · `next` (**prevista**: integração da migração, nasce no scaffold da v1.2 e só existe durante ela) |
 | Board | [Madiba Gift Catalog](https://trello.com/b/BAJGQ2Xg/madiba-gift-catalog) |
 | Docs | `docs/` é a fonte de verdade; 14 docs + 9 ADRs |
 
@@ -55,7 +55,9 @@ uma única conversão: o envio do carrinho pelo WhatsApp).
 
 ## O que este projeto NÃO herda
 
-- A stack (CRA/Next) — **decisão aberta**, vira ADR-0001 daqui.
+- A stack (CRA/Next) — **decisão aberta**, reservada para o
+  [ADR-0011](adr/README.md) daqui.
 - A janela da branch `next` — exceção da migração do catálogo.
 - Variáveis de ambiente `REACT_APP_*` / `NEXT_PUBLIC_*` do catálogo.
-- Os escopos v1/v1.1/v1.2 — são do catálogo; o escopo daqui está **a definir**.
+- Os escopos v1/v1.1/v1.2 — são do catálogo; o escopo daqui é o
+  [`escopo-v1.md`](escopo-v1.md).
