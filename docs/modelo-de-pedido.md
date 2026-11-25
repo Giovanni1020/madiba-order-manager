@@ -2,7 +2,8 @@
 
 > Transcrito de `src/types/order.ts` e `src/components/checkoutMessage.ts` do
 > **Madiba Gift Catalog** em **2026-11-22**. É o formato com que o pedido **nasce hoje**.
-> Decisões próprias deste projeto (persistência, status, identidade do pedido) virão em ADRs.
+> Decisões próprias deste projeto estão nos ADRs (status no ADR-0003, identidade no ADR-0005);
+> persistência segue em aberto (ADR-0011).
 
 ## Tipos do domínio (catálogo)
 
@@ -44,14 +45,16 @@ export interface Pedido {
 Um `CartItem` carrega `product`, `quantity`, opcionalmente `variant` e `extras`. Os adicionais
 observados no formatador do WhatsApp:
 
-- `balao` (texto), `plaquinha` (texto), `polaroides` (bool)
-- `cartao`: `"pre_escrito" | "branco"` — quando `"branco"`, `cartaoMensagem` leva o texto
+- `balao` e `plaquinha`: **listas fechadas** de opções (`BALAO_OPTIONS`, `PLAQUINHA_OPTIONS`),
+  `null` quando não escolhidos; `polaroides` (bool)
+- `cartao`: `"pre_escrito" | "branco" | null` — quando `"branco"`, `cartaoMensagem` leva o texto
 - `chocolates`: mapa `id → quantidade` (`CHOCOLATE_OPTIONS`)
 
 O preço de linha é
-`quantity * (basePrice(product, variant) + extrasTotal(extras, product))` — ou seja,
-**preço não é campo do produto**: depende de variante (ADR-0005) e de promoção vigente
-(ADR-0006).
+`quantity * (basePrice(product, variant) + extrasTotal(extras, product))` — ou seja, o
+**preço praticado não é o `price` do produto**: o produto tem `price`, mas `basePrice` resolve
+variante, depois promoção vigente, e só então cai no `price` (ADR-0005 e ADR-0006 **do
+catálogo**, não os deste repo).
 
 ## Consequências para este projeto
 
@@ -60,9 +63,9 @@ O preço de linha é
    que recalcular pelo catálogo depois dá valor diferente. Um pedido registrado guarda o preço
    praticado.
 3. **`Entrega` é união discriminada** — preservar isso evita endereço vazio em retirada.
-4. **O pedido chega como texto de WhatsApp**, não como JSON. Qualquer importação precisa
-   decidir entre *parsear a mensagem*, *mudar o catálogo para emitir dados estruturados*, ou
-   *entrada manual*. **Decisão aberta → ADR.**
+4. **O pedido chega como texto de WhatsApp**, não como JSON. Resolvido no
+   [ADR-0007](adr/0007-dominio-puro-e-porta-de-ingestao.md): **entrada manual** agora, pela
+   porta única `criarPedido`; o site chama a mesma porta quando a integração vier (D3, D6).
 5. **Não existe identificador de pedido hoje.** Criar um é decisão deste projeto →
    resolvido em [ADR-0005](adr/0005-identidade-do-pedido.md).
 6. **Não existe status de pedido hoje.** A máquina de estados é o coração deste projeto e não

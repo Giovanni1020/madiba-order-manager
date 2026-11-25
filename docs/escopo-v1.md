@@ -33,7 +33,7 @@ não refletir a prática, é melhor saber em duas semanas que em três meses.
 | Cadastro manual de pedido de buquê | [ADR-0007](adr/0007-dominio-puro-e-porta-de-ingestao.md) |
 | Preço e peso congelados no pedido | [ADR-0006](adr/0006-congelamento-de-preco-e-peso.md) |
 | Código humano `DDMM-NN` + UUID interno | [ADR-0005](adr/0005-identidade-do-pedido.md) |
-| 5 estados + eixo de pagamento manual + flag de atenção | [ADR-0003](adr/0003-estados-do-pedido-em-eixos.md) |
+| Máquina de estados com 7 estados (bifurca em retirada × entrega) + eixo de pagamento manual + flag de atenção | [ADR-0003](adr/0003-estados-do-pedido-em-eixos.md) |
 | Tela do dia, hora a hora, ordenada por prazo, com folga visível | [ADR-0002](adr/0002-fila-por-prazo-e-orcamento.md) |
 | Verificação de viabilidade ao aceitar pedido (aviso, não bloqueio) | [ADR-0002](adr/0002-fila-por-prazo-e-orcamento.md) · [ADR-0001](adr/0001-peso-como-unidade-de-capacidade.md) |
 | Limite de capacidade por hora, ajustável pelo gerente, auditado | [ADR-0001](adr/0001-peso-como-unidade-de-capacidade.md) |
@@ -97,14 +97,13 @@ mockup, quando as telas estiverem definidas.
 
 ## Em aberto
 
-| Tema | O que falta decidir |
-|---|---|
-| **Stack e persistência** | Framework, banco e provedor de autenticação. Precisa de backend — diferente do catálogo, que é estático. Vira **ADR-0011**. Não afeta o domínio ([ADR-0007](adr/0007-dominio-puro-e-porta-de-ingestao.md)). |
-| **Matriz de permissões** | Quais papéis e o que cada um pode. Deferido **de propósito** ([ADR-0009](adr/0009-autorizacao-em-ponto-unico.md) D3); o mecanismo já está decidido. |
-| **Imutabilidade após estado terminal** | Quais campos travam, a partir de qual estado ([ADR-0009](adr/0009-autorizacao-em-ponto-unico.md) D5). |
-| **LGPD: retenção e visibilidade** | Admin vê histórico completo; funcionário vê janela recente (ordem de últimos dias/semana). Recorte exato e prazo de retenção **pendentes de conversa com advogado** — a decidir antes da Fase 3. |
-| **Pedido sem janela definida** | Onde aparece na tela do dia, já que sem prazo não entra na conta de viabilidade ([ADR-0002](adr/0002-fila-por-prazo-e-orcamento.md), Consequências). |
-| **Valor base da capacidade por hora** | O número de partida, por hora e por dia da semana. |
+A lista do que falta decidir mora num lugar só, para não ter duas versões divergindo:
+
+- **Decisões do projeto** (Giovanni): [`decisoes-pendentes.md`](decisoes-pendentes.md), com opções,
+  recomendação e o bloco do que trava cada fase. Os temas que estavam nesta seção (stack e
+  persistência, matriz de permissões, imutabilidade após estado terminal, LGPD, pedido sem
+  janela, capacidade base por hora) estão lá.
+- **Perguntas para a loja** (Bruna e Edson): [`perguntas-de-negocio.md`](perguntas-de-negocio.md).
 
 ### Nota sobre LGPD
 

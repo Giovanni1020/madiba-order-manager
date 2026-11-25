@@ -4,7 +4,8 @@
 > Em qualquer sessão/janela nova, **comece por aqui.**
 
 > **Status:** Fase 0 (decisões) **concluída** em 2026-11-22 — ADRs 0001–0010 e
-> [escopo-v1.md](escopo-v1.md) fechados. **Sem código e sem repositório git ainda.**
+> [escopo-v1.md](escopo-v1.md) fechados. **Sem código de aplicação ainda**; o repositório
+> (<https://github.com/Giovanni1020/madiba-order-manager>) tem só a documentação.
 > Próximo passo: **Fase 1 — mockup das telas**. Stack e persistência seguem **em aberto**
 > (futuro ADR-0011).
 
@@ -15,6 +16,7 @@
 | [como-trabalhamos.md](como-trabalhamos.md) | Papel do Claude + dinâmica de trabalho (Grill Me, PT-BR, economia de contexto, governança). **Leia antes de pedir código.** |
 | [escopo-v1.md](escopo-v1.md) | **Escopo da v1**: objetivo, critério, o que está dentro/fora, as 6 fases, prazo declarado e o que segue em aberto. |
 | [contexto-herdado.md](contexto-herdado.md) | O negócio (Madiba Garden), o projeto irmão, e o que este projeto herda ou não. |
+| [decisoes-pendentes.md](decisoes-pendentes.md) | Lista única do que falta o Giovanni decidir, com opções e recomendação, agrupada pela fase que cada item trava. |
 | [modelo-de-pedido.md](modelo-de-pedido.md) | O formato com que o pedido nasce hoje no catálogo (tipos, centavos, adicionais) e as consequências disso aqui. |
 | [branches-e-deploy.md](branches-e-deploy.md) | Estratégia de branches (feature → `main` → `production`) e a regra: **produção só com permissão humana.** |
 | [trello-padrao.md](trello-padrao.md) | Padrão de card do Trello (tipos, estrutura da descrição, checklist de aceite). |
@@ -36,11 +38,9 @@
 
 ## Decisões em aberto
 
-Lista completa, com o que falta decidir em cada uma, em
-[escopo-v1.md § Em aberto](escopo-v1.md#em-aberto): **stack e persistência** (ADR-0011),
-conteúdo da matriz de permissões, imutabilidade após estado terminal, **retenção e
-visibilidade (LGPD, pendente de advogado)**, pedido sem janela definida, valor base da
-capacidade por hora.
+- **Decisões do projeto:** [decisoes-pendentes.md](decisoes-pendentes.md), a lista única, com
+  opções e recomendação, agrupada pela fase que cada item trava.
+- **Perguntas para a loja:** [perguntas-de-negocio.md](perguntas-de-negocio.md).
 
 ## Convenções
 

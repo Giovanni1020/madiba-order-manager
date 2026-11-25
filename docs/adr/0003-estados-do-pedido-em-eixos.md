@@ -66,9 +66,10 @@ erro de domínio. Transição inválida falha **no domínio**, não por botão e
 - Consultas de operação passam a cruzar eixos ("pronto e não pago", "atrasando e com
   atenção"). Isso é recurso, não custo.
 - **`em rota` existe e é operado no v1**, marcado manualmente por quem atende. O que fica
-  para a v1.1 é a **tela do entregador** (role própria, atualização pelo celular dele) e o
-  modelo de capacidade de entrega
-  ([ADR-0001](0001-peso-como-unidade-de-capacidade.md), Consequências).
+  para a v1.1 é a **tela do entregador** (role própria, atualização pelo celular dele). O
+  modelo de capacidade de entrega é **objetivo distante**, fora do v1 e da v1.1
+  ([ADR-0001](0001-peso-como-unidade-de-capacidade.md), Consequências;
+  [`escopo-v1.md`](../escopo-v1.md), Fora de escopo).
 - Cancelado é terminal e não volta. Reabrir é pedido novo — e o log liga os dois
   ([ADR-0004](0004-registro-e-auditoria.md)).
 - Toda transição gera evento de auditoria ([ADR-0004](0004-registro-e-auditoria.md)).
