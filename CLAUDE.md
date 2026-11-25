@@ -6,8 +6,10 @@ Este arquivo é só o **ponto de entrada** — não duplica conteúdo, para nunc
 ## Ao iniciar qualquer sessão neste repo
 
 1. Leia **`docs/README.md`** — índice de toda a documentação.
-2. Atue conforme **`docs/como-trabalhamos.md`** — papel, dinâmica "Grill Me", PT-BR,
-   economia de contexto e regras de governança.
+2. Atue conforme o doc de trabalho, importado aqui: @docs/como-trabalhamos.md
+   Ele cobre papel, dinâmica "Grill Me", PT-BR em tudo (inclusive commit e PR), economia de
+   contexto e regras de governança. O `@` importa o doc, então ele entra no contexto de toda
+   sessão sem depender de alguém abrir o arquivo.
 3. Escopo atual, fases e o que segue em aberto: **`docs/escopo-v1.md`**.
 4. Contexto do negócio e o que este projeto herda do catálogo:
    **`docs/contexto-herdado.md`**. Modelo de pedido: **`docs/modelo-de-pedido.md`**.
