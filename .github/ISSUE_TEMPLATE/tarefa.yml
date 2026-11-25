@@ -1,0 +1,61 @@
+name: Tarefa
+description: Toda tarefa do projeto (SPEC, ADR, GUIA, FEAT, FIX, SEC, CHORE). Padrão em docs/github-projects.md.
+title: "<emoji> <TIPO>: "
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      description: "SPEC descreve o que o código faz; ADR decide entre alternativas (tem trade-off); GUIA fixa convenção de processo."
+      options:
+        - 📄 SPEC
+        - 📐 ADR
+        - 📘 GUIA
+        - 🔧 FEAT
+        - 🐛 FIX
+        - 🔐 SEC
+        - 🧹 CHORE
+    validations:
+      required: true
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: O porquê, em 1 a 3 linhas.
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto / Onde mora hoje
+      description: Arquivos e linhas reais.
+    validations:
+      required: true
+  - type: textarea
+    id: opcoes
+    attributes:
+      label: Pauta / Opções
+      description: Só quando há decisão a tomar (alternativas e trade-offs). Senão, deixe vazio.
+  - type: textarea
+    id: premissa
+    attributes:
+      label: Premissa a verificar
+      description: Só quando há suposição a medir antes de decidir. Senão, deixe vazio.
+  - type: textarea
+    id: entregavel
+    attributes:
+      label: Entregável
+      description: O artefato concreto. Doc novo entra no índice docs/README.md.
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceite
+      description: Itens verificáveis. O primeiro e o último são fixos.
+      value: |
+        - [ ] GRELHAR primeiro:
+        - [ ]
+        - [ ] Entregue via branch → PR para main (sem deploy a produção sem permissão)
+    validations:
+      required: true

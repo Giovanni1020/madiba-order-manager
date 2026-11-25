@@ -49,7 +49,8 @@ uma única conversão: o envio do carrinho pelo WhatsApp).
 
 1. **Governança e comportamento** → [`como-trabalhamos.md`](como-trabalhamos.md).
 2. **Fluxo de branches e a regra de produção** → [`branches-e-deploy.md`](branches-e-deploy.md).
-3. **Formato de card do Trello** → [`trello-padrao.md`](trello-padrao.md).
+3. **Formato de card do Trello**, hoje como padrão de issue do GitHub →
+   [`github-projects.md`](github-projects.md).
 4. **O modelo de pedido** → [`modelo-de-pedido.md`](modelo-de-pedido.md).
 5. **A convenção de ADR numerado** em [`adr/`](adr/).
 

@@ -17,7 +17,7 @@
 | [contexto-herdado.md](contexto-herdado.md) | O negócio (Madiba Garden), o projeto irmão, e o que este projeto herda ou não. |
 | [modelo-de-pedido.md](modelo-de-pedido.md) | O formato com que o pedido nasce hoje no catálogo (tipos, centavos, adicionais) e as consequências disso aqui. |
 | [branches-e-deploy.md](branches-e-deploy.md) | Estratégia de branches (feature → `main` → `production`) e a regra: **produção só com permissão humana.** |
-| [trello-padrao.md](trello-padrao.md) | Padrão de card do Trello (tipos, estrutura da descrição, checklist de aceite). |
+| [github-projects.md](github-projects.md) | Quadro do GitHub Projects (no lugar do Trello): configuração, fluxo de uma tarefa e padrão de issue (tipos, corpo, critérios de aceite). |
 
 ## ADRs
 
