@@ -16,6 +16,7 @@
 | [escopo-v1.md](escopo-v1.md) | **Escopo da v1**: objetivo, critério, o que está dentro/fora, as 6 fases, prazo declarado e o que segue em aberto. |
 | [contexto-herdado.md](contexto-herdado.md) | O negócio (Madiba Garden), o projeto irmão, e o que este projeto herda ou não. |
 | [modelo-de-pedido.md](modelo-de-pedido.md) | O formato com que o pedido nasce hoje no catálogo (tipos, centavos, adicionais) e as consequências disso aqui. |
+| [discussoes/](discussoes/) | Registros de conversas com a loja: o que foi decidido e o insumo recebido. Começa em [2026-11-20](discussoes/2026-11-20-conversa-sobre-o-app.md). |
 | [branches-e-deploy.md](branches-e-deploy.md) | Estratégia de branches (feature → `main` → `production`) e a regra: **produção só com permissão humana.** |
 | [trello-padrao.md](trello-padrao.md) | Padrão de card do Trello (tipos, estrutura da descrição, checklist de aceite). |
 
