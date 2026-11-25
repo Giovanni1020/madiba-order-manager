@@ -21,6 +21,9 @@
 
 ## ADRs
 
+ADR novo parte do modelo [`adr/0000-template.md`](adr/0000-template.md). Como um ADR aceito muda
+(editar no lugar ou substituir) está em [`adr/README.md`](adr/README.md#como-um-adr-muda).
+
 | ADR | Decisão |
 |---|---|
 | [0001](adr/0001-peso-como-unidade-de-capacidade.md) | **Peso** mede só tempo e esforço de produção; é atributo da **montagem**; o que a gestão ajusta é a **capacidade da hora**; limite **soft** (avisa, não bloqueia). |

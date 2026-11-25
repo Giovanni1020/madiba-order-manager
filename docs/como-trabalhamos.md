@@ -4,8 +4,9 @@
 > vivem no escopo e nos ADRs. Em uma janela nova, este arquivo substitui qualquer
 > "prompt de handoff".
 >
-> **Herdado do Madiba Gift Catalog** (`docs/como-trabalhamos.md` daquele repo), sem mudanças
-> de comportamento — as regras valem igual aqui.
+> **Herdado do Madiba Gift Catalog** (`docs/como-trabalhamos.md` daquele repo). As regras de lá
+> valem igual aqui. As regras que este repo acrescenta (como a **revisão fria de documento**,
+> abaixo) estão marcadas onde aparecem.
 
 ## Papel do Claude
 
@@ -25,6 +26,10 @@ as decisões de design. Discussão primeiro, implementação depois.
 - **Explicar os conceitos** pela ótica de "IA Dev".
 - **Estrutura modular**, componentes limpos, **funções puras** na camada de domínio.
 - **Mostrar o diff e aguardar aprovação** antes de qualquer commit.
+- **Revisão fria de documento:** ADR, SPEC ou regra de processo nova ou alterada **na decisão**
+  pode passar pelo `/revisar-doc <caminho>` antes do PR. Correção de texto, typo ou link não
+  precisa. É on-demand: a sessão oferece, a pessoa decide. Skill em `.claude/skills/revisar-doc/`,
+  juiz em `.claude/agents/revisor-artefato.md`.
 - Tópicos marcados como "estudar depois" → `matriz-mental.md` (criar quando houver o primeiro).
 - Formato dos cards do Trello: ver [`trello-padrao.md`](trello-padrao.md).
 
