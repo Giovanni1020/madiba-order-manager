@@ -103,8 +103,17 @@ mockup, quando as telas estiverem definidas.
 | **Matriz de permissões** | Quais papéis e o que cada um pode. Deferido **de propósito** ([ADR-0009](adr/0009-autorizacao-em-ponto-unico.md) D3); o mecanismo já está decidido. |
 | **Imutabilidade após estado terminal** | Quais campos travam, a partir de qual estado ([ADR-0009](adr/0009-autorizacao-em-ponto-unico.md) D5). |
 | **LGPD: retenção e visibilidade** | Admin vê histórico completo; funcionário vê janela recente (ordem de últimos dias/semana). Recorte exato e prazo de retenção **pendentes de conversa com advogado** — a decidir antes da Fase 3. |
-| **Pedido sem janela definida** | Onde aparece na tela do dia, já que sem prazo não entra na conta de viabilidade ([ADR-0002](adr/0002-fila-por-prazo-e-orcamento.md), Consequências). |
 | **Valor base da capacidade por hora** | O número de partida, por hora e por dia da semana. |
+| **Estado `em fila`** | Aberto pela Fase 1: um estado entre `recebido` e `em produção`. Altera o [ADR-0003](adr/0003-estados-do-pedido-em-eixos.md) D2, então **vira ADR próprio** (não o 0011). Falta decidir a transição, quem pode fazê-la e se `recebido` consome capacidade. Ver [feedback-mockup-fase1.md](feedback-mockup-fase1.md#em-fila). |
+| **Faixa de `atrasando`** | Aberto pela Fase 1: o número que separa `no tempo` de `atrasando` no eixo de tempo. O [ADR-0002](adr/0002-fila-por-prazo-e-orcamento.md) D4 só diz "perto de zero". |
+
+### Fechado pela Fase 1
+
+- **Pedido sem janela definida** — aparece numa **bandeja fixa no topo** da tela do dia, com o
+  peso somado à parte e marcado como fora da conta de viabilidade
+  ([ADR-0002](adr/0002-fila-por-prazo-e-orcamento.md), Consequências). Decidido no mockup e
+  não contestado na primeira rodada de feedback
+  ([feedback-mockup-fase1.md](feedback-mockup-fase1.md)).
 
 ### Nota sobre LGPD
 

@@ -4,9 +4,10 @@
 > Em qualquer sessão/janela nova, **comece por aqui.**
 
 > **Status:** Fase 0 (decisões) **concluída** em 2026-11-22 — ADRs 0001–0010 e
-> [escopo-v1.md](escopo-v1.md) fechados. **Sem código e sem repositório git ainda.**
-> Próximo passo: **Fase 1 — mockup das telas**. Stack e persistência seguem **em aberto**
-> (futuro ADR-0011).
+> [escopo-v1.md](escopo-v1.md) fechados. **Sem código de produção ainda.**
+> **Fase 1 (mockup) em andamento:** mockup navegável publicado em 2026-11-24, primeira rodada
+> de feedback registrada em [feedback-mockup-fase1.md](feedback-mockup-fase1.md).
+> Stack e persistência seguem **em aberto** (futuro ADR-0011).
 
 ## Índice
 
@@ -14,6 +15,7 @@
 |---|---|
 | [como-trabalhamos.md](como-trabalhamos.md) | Papel do Claude + dinâmica de trabalho (Grill Me, PT-BR, economia de contexto, governança). **Leia antes de pedir código.** |
 | [escopo-v1.md](escopo-v1.md) | **Escopo da v1**: objetivo, critério, o que está dentro/fora, as 6 fases, prazo declarado e o que segue em aberto. |
+| [feedback-mockup-fase1.md](feedback-mockup-fase1.md) | **Fase 1**: veredito do feedback do mockup, o que ele fechou e o que abriu (inclui o estado `em fila`, pendente de ADR). |
 | [contexto-herdado.md](contexto-herdado.md) | O negócio (Madiba Garden), o projeto irmão, e o que este projeto herda ou não. |
 | [modelo-de-pedido.md](modelo-de-pedido.md) | O formato com que o pedido nasce hoje no catálogo (tipos, centavos, adicionais) e as consequências disso aqui. |
 | [branches-e-deploy.md](branches-e-deploy.md) | Estratégia de branches (feature → `main` → `production`) e a regra: **produção só com permissão humana.** |
@@ -39,8 +41,15 @@
 Lista completa, com o que falta decidir em cada uma, em
 [escopo-v1.md § Em aberto](escopo-v1.md#em-aberto): **stack e persistência** (ADR-0011),
 conteúdo da matriz de permissões, imutabilidade após estado terminal, **retenção e
-visibilidade (LGPD, pendente de advogado)**, pedido sem janela definida, valor base da
-capacidade por hora.
+visibilidade (LGPD, pendente de advogado)**, valor base da capacidade por hora.
+
+Abertas pela Fase 1, em
+[feedback-mockup-fase1.md § Em aberto](feedback-mockup-fase1.md#em-aberto-depois-desta-rodada):
+**estado `em fila`** (ADR próprio, não o 0011 — altera o ADR-0003 D2) e a **faixa numérica de
+`atrasando`** no eixo de tempo.
+
+Fechada pela Fase 1: **pedido sem janela definida** — bandeja fixa no topo da tela do dia,
+peso somado à parte, fora da conta de viabilidade.
 
 ## Convenções
 
